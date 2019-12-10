@@ -25,6 +25,8 @@ div.name
 <body>
 <% String userid = request.getParameter("uname");
 String password = request.getParameter("psw");
+session.setAttribute("SES_UserName",userid);
+session.setAttribute("SES_Password",password);
 Connection conn = null;
 ResultSet rs = null;
 Statement stmt = null;
@@ -49,18 +51,24 @@ ResultSet resultSet = null;
 		 }
   }
 	else if(choice.equals("Customer")){
-		%>
-		<div>
-		<a href="customer.html">Continue</a>
-	    </div>
-<% 
+			q="select pass_word from users where userName='"+userid+"';";
+		resultSet=stmt.executeQuery(q);
+		while (resultSet.next()){
+		passWord=resultSet.getString("pass_word");
+		}
+		if(password.equals(passWord)){
+		    response.sendRedirect("customer.html");
+		 }
 	}
 	else if(choice.equals("Hotel Staff")){
-		%>
-		<div>
-		<a href="hotelStaff.html">Continue</a>
-	    </div>
-<%
+		q="select pass_word from staff where userName='"+userid+"';";
+		resultSet=stmt.executeQuery(q);
+		while (resultSet.next()){
+		passWord=resultSet.getString("pass_word");
+		}
+		if(password.equals(passWord)){
+		    response.sendRedirect("staffLogin.html");
+		 }
 	}
 	else{
 	q=request.getParameter("custom");
