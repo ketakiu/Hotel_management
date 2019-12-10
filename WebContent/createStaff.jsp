@@ -1,5 +1,7 @@
+<%@page import="java.text.SimpleDateFormat"%>
 <%@ page import="java.io.*,java.util.*,java.sql.*"%>
 <%@ page import="javax.servlet.http.*,javax.servlet.*" %>
+<%@ page import=" java.sql.Date" %>
 
 <html>
 <head>
@@ -20,56 +22,34 @@ div.name
 			padding-left:2%;
 		}
 	</style>
-	<title>JDBC</title>
+	<title>Create Hotel Staff</title>
 </head>
 <body>
-<% String userid = request.getParameter("uname");
-String password = request.getParameter("psw");
+<% String firstName = request.getParameter("firstname");
+String lastName = request.getParameter("lastname");
+String email = request.getParameter("email");
+String userName = request.getParameter("username");
+String password = request.getParameter("password");
+String phone = request.getParameter("phone");
+String dob = request.getParameter("dob");
+   String type = request.getParameter("type");
+java.sql.Date date=java.sql.Date.valueOf(dob);
 Connection conn = null;
 ResultSet rs = null;
 Statement stmt = null;
+PreparedStatement statement = null;
 ResultSetMetaData rsmd ;
-ResultSet resultSet = null;
 
    Class.forName("com.mysql.jdbc.Driver");
    String url = "jdbc:mysql://cs5200-fall2019-udipi1.c0gfzy5hp1s0.us-east-2.rds.amazonaws.com/hotel_management";
    conn = DriverManager.getConnection(url,"admin","Ketaki7495#");
    stmt=conn.createStatement();
 	String q="";
-	String passWord="";
-	String choice = request.getParameter("user");
-	if(choice.equals("Admin")){
-		q="select pass_word from admin where username='"+userid+"';";
-		resultSet=stmt.executeQuery(q);
-		while (resultSet.next()){
-		passWord=resultSet.getString("pass_word");
-		}
-		if(password.equals(passWord)){
-		    response.sendRedirect("adminlogin.html");
-		 }
-  }
-	else if(choice.equals("Customer")){
-		%>
-		<div>
-		<a href="customer.html">Continue</a>
-	    </div>
-<% 
-	}
-	else if(choice.equals("Hotel Staff")){
-		%>
-		<div>
-		<a href="hotelStaff.html">Continue</a>
-	    </div>
-<%
-	}
-	else{
-	q=request.getParameter("custom");
-	}
+	q="insert into staff (firstName,lastName,email,userName,pass_word,phone,dob, dtype) values ('"+firstName+"','"+lastName+"','"+email+"','"+userName+"','"+password+"','"+phone+"','"+date+"', '"+type+"');";
+	stmt.executeUpdate(q);
+	response.sendRedirect("signup_success.html");
+	
 %>
-
-
-
-
 
 <br><br>
 

@@ -46,6 +46,7 @@ ResultSetMetaData rsmd ;
 	String q="";
 	q="insert into users (firstName,lastName,email,userName,pass_word,phone,dob) values ('"+firstName+"','"+lastName+"','"+email+"','"+userName+"','"+password+"','"+phone+"','"+date+"');";
 	stmt.executeUpdate(q);
+	response.sendRedirect("signup_success.html");
 	
 %>
 
