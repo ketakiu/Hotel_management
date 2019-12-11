@@ -16,22 +16,47 @@ Statement stmt = null;
 <!DOCTYPE html>
 <html>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<head>
+<style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+button {
+	background-color: #4CAF50;
+  color: white;	
+}
+</style>
+</head>
 <body>
 <h1>Staff data from database </h1>
 <table border="1">
 <tr>
-<td>id</td>
-<td>first name</td>
-<td>last name</td>
-<td>Email</td>
-<td>username</td>
-<td>password</td>
-<td>Phone Number</td>
+<th>id</th>
+<th>first name</th>
+<th>last name</th>
+<th>Email</th>
+<th>Username</th>
+<th>password</th>
+<th>Phone Number</th>
 
-<td>Date of Birth</td>
-<td>Type of Staff</td>
+<th>Date of Birth</th>
+<th>Type of Staff</th>
 
-<td>Action</td>
+<th>Action</th>
 </tr>
 <%
 
@@ -49,7 +74,7 @@ while(resultSet.next()){
 <td><%=resultSet.getString("phone") %></td>
 <td><%=resultSet.getString("dob") %></td>
 <td><%=resultSet.getString("dtype") %></td>
-<td><a href="deleteStaff1.jsp?id=<%=resultSet.getString("id") %>"><button type="button" class="delete">Delete</button></a></td>
+<td><button onclick="window.location.href = 'deleteStaff1.jsp?id=<%=resultSet.getString("id") %>'" value="Add" id="addToTable;">Delete</button></td>
 </tr>
 <%
 }

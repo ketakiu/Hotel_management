@@ -18,19 +18,44 @@ Statement stmt = null;
 
 %>
 <html>
+<head>
+<style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+button {
+	background-color: #4CAF50;
+  color: white;	
+}
+</style>
+</head>
 <body>
 <h1>Staff information</h1>
 <table border="1">
 <tr>
-<td>id</td>
-<td>First name</td>
-<td>Last name</td>
-    <td>Email</td>
-    <td>Username</td>
-    <td>Password</td>
-    <td>Phone Number</td>
-    <td>Date of Birth</td>
-    <td>Type of Staff</td>
+<th>id</th>
+<th>First name</th>
+<th>Last name</th>
+    <th>Email</th>
+    <th>Username</th>
+    <th>Password</th>
+    <th>Phone Number</th>
+    <th>Date of Birth</th>
+    <th>Type of Staff</th>
 </tr>
 <%
 try{

@@ -42,41 +42,39 @@ button {
   color: white;	
 }
 </style>
-
 </head>
 <body>
-<h1>Staff information</h1>
+<h1>Booking information</h1>
 <table border="1">
 <tr>
 <th>id</th>
-<th>First name</th>
-<th>Last name</th>
-<th>Email</th>
 <th>Username</th>
-<th>password</th>
-<th>Phone Number</th>
-<th>Date of Birth</th>
-<th>Type of Staff</th>
+<th>Number of Rooms</th>
+<th>Number of Guests</th>
+<th>Type of Room</th>
+<th>Check-in Date</th>
+<th>Check-out Date</th>
+<th>Facilities</th>
+
 <th>Action</th>
 </tr>
 <%
-String sql ="select * from staff";
+String sql ="select * from bookings";
 resultSet = stmt.executeQuery(sql);
 while(resultSet.next()){
 %>
 <tr>
 <td><%=resultSet.getString("id") %></td>
-<td><%=resultSet.getString("firstName") %></td>
-<td><%=resultSet.getString("lastName") %></td>
-<td><%=resultSet.getString("email") %></td>
 <td><%=resultSet.getString("userName") %></td>
-<td><%=resultSet.getString("pass_word") %></td>
-<td><%=resultSet.getString("phone") %></td>
-<td><%=resultSet.getString("dob") %></td>
-<td><%=resultSet.getString("dtype") %></td>
+<td><%=resultSet.getString("noOfRooms") %></td>
+<td><%=resultSet.getString("noOfGuests") %></td>
+<td><%=resultSet.getString("roomType") %></td>
+<td><%=resultSet.getString("checkIn") %></td>
+<td><%=resultSet.getString("checkOut") %></td>
+<td><%=resultSet.getString("facilities") %></td>
     
 
-<td><button onclick="window.location.href = 'updateStaff1.jsp?id=<%=resultSet.getString("id")%>'" value="Add" id="addToTable;">update</button></td>
+<td><button onclick="window.location.href = 'updateBookingByAdmin1.jsp?id=<%=resultSet.getString("id")%>'" value="Add" id="addToTable;">Update</button></td>
 </tr>
 <%
 }

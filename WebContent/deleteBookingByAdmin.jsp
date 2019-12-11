@@ -1,7 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<%@ page import="java.sql.*" %>
-<%@ page import="java.io.*" %>
 <%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
@@ -17,7 +13,9 @@ Statement stmt = null;
    stmt=conn.createStatement();
    
 %>
+<!DOCTYPE html>
 <html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <head>
 <style>
 table {
@@ -45,43 +43,39 @@ button {
 
 </head>
 <body>
-<h1>Staff information</h1>
+<h1>Booking data of the Hotel </h1>
 <table border="1">
 <tr>
 <th>id</th>
-<th>First name</th>
-<th>Last name</th>
-<th>Email</th>
 <th>Username</th>
-<th>password</th>
-<th>Phone Number</th>
-<th>Date of Birth</th>
-<th>Type of Staff</th>
+<th>Number of Rooms</th>
+<th>Number of Guests</th>
+<th>Type of Room</th>
+<th>Check-in Date</th>
+<th>Check-out Date</th>
+
+<th>Facilities</th>
 <th>Action</th>
 </tr>
 <%
-String sql ="select * from staff";
+String sql ="select * from bookings";
 resultSet = stmt.executeQuery(sql);
 while(resultSet.next()){
 %>
 <tr>
 <td><%=resultSet.getString("id") %></td>
-<td><%=resultSet.getString("firstName") %></td>
-<td><%=resultSet.getString("lastName") %></td>
-<td><%=resultSet.getString("email") %></td>
 <td><%=resultSet.getString("userName") %></td>
-<td><%=resultSet.getString("pass_word") %></td>
-<td><%=resultSet.getString("phone") %></td>
-<td><%=resultSet.getString("dob") %></td>
-<td><%=resultSet.getString("dtype") %></td>
-    
-
-<td><button onclick="window.location.href = 'updateStaff1.jsp?id=<%=resultSet.getString("id")%>'" value="Add" id="addToTable;">update</button></td>
+<td><%=resultSet.getString("noOfRooms") %></td>
+<td><%=resultSet.getString("noOfGuests") %></td>
+<td><%=resultSet.getString("roomType") %></td>
+<td><%=resultSet.getString("checkIn") %></td>
+<td><%=resultSet.getString("checkOut") %></td>
+<td><%=resultSet.getString("facilities") %></td>
+<td><button onclick="window.location.href = 'deleteBookingByAdmin1.jsp?id=<%=resultSet.getString("id") %>'" value="Add" id="addToTable;">Delete</button></td>
 </tr>
 <%
 }
 %>
-
 </table>
 </body>
 </html>

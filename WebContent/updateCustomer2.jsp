@@ -29,7 +29,7 @@ ps = conn.prepareStatement(sql);
 int i = ps.executeUpdate();
 if(i > 0)
 {
-out.print("Record Updated Successfully. Login with new ID password for further operations");
+out.print("Record Updated Successfully. iF username changed then Login with new ID for further operations");
 }
 else
 {

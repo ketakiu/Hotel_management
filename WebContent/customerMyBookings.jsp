@@ -19,17 +19,44 @@ Statement stmt = null;
 
 %>
 <html>
+<head>
+<style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+button {
+	background-color: #4CAF50;
+  color: white;	
+}
+</style>
+</head>
 <body>
 <h1>My Bookings</h1>
 <table border="1">
 <tr>
-<td>id</td>
-<td>No of Rooms</td>
-<td>No of guests</td>
-    <td>Room Type</td>
-    <td>Check-In Date</td>
-    <td>Check-Out Date</td>
-    <td>Restaurant Facilities</td>
+<th>id</th>
+<th>No of Rooms</th>
+<th>No of guests</th>
+<th>Room Type</th>
+<th>Check-In Date</th>
+<th>Check-Out Date</th>
+<th>Restaurant Facilities</th>
+<th>Action</th>
+<th>Action</th>
 </tr>
 <%
 try{
@@ -46,6 +73,8 @@ while(resultSet.next()){
 <td><%=resultSet.getString("checkIn") %></td>
     <td><%=resultSet.getString("checkOut") %></td>
     <td><%=resultSet.getString("facilities") %></td>
+    <td><button onclick="window.location.href = 'updateBookingByCustomer.jsp?id=<%=resultSet.getString("id")%>'" value="Add" id="addToTable;">update</button></td>
+    <td><button onclick="window.location.href = 'deleteBookingByCustomer.jsp?id=<%=resultSet.getString("id")%>'" value="Add" id="addToTable;">delete</button></td>
     
 </tr>
 <%
