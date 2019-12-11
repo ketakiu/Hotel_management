@@ -30,7 +30,7 @@ ps = conn.prepareStatement(sql);
 int i = ps.executeUpdate();
 if(i > 0)
 {
-out.print("Record Updated Successfully");
+	response.sendRedirect("updateStaff.jsp");
 }
 else
 {

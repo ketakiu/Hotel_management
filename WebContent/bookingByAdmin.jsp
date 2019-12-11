@@ -47,7 +47,7 @@ ResultSetMetaData rsmd ;
 	String q="";
 	q="insert into bookings (userName, noOfRooms, noOfGuests, roomType, checkIn, checkOut, facilities) values ('"+userName+"','"+noOfRooms+"','"+noOfGuests+"','"+roomType+"','"+checkIn+"','"+checkOut+"','"+facility+"');";
 	stmt.executeUpdate(q);
-    response.sendRedirect("bookingsucess.html");
+    response.sendRedirect("bookingSuccessAdmin.html");
 	
 %>
 
