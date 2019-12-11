@@ -1,50 +1,163 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Hotel Website</title>
+<title>Hotel Management System</title>
   <meta charset="utf-8">
   <link href="text.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
-<body>
-<!--
-<style>
-body {
-  background-image: url('hotel_room1.jfif');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100% 100%;
+    <style>
+ 
+        
+.button1 {
+    top: 10%;
+  left: 10%;
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.button2 {
+    top: 10%;
+  left: 30%;
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA;
+}
+
+.button2:hover {
+  background-color: #008CBA;
+  color: white;
+}
+.mySlides {display:none;}
+.button3 {
+    top: 10%;
+  left: 50%;
+  background-color: white; 
+  color: black; 
+  border: 2px solid #f44336;
+}
+
+.button3:hover {
+  background-color: #f44336;
+  color: white;
+}
+.button4 {
+    top:10%;
+  left: 70%;
+  background-color: white; 
+  color: black; 
+  border: 2px solid #f44336;
+}
+
+.button4:hover {
+  background-color: #f44336;
+  color: white;
+}
+.button5 {
+    top: 10%;
+  left: 90%;
+  background-color: white; 
+  color: black; 
+  border: 2px solid #f44336;
+}
+
+.button5:hover {
+  background-color: #f44336;
+  color: white;
+}
+    .container .btn {
+  position: absolute;
+  
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: wheat;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.container .btn:hover {
+  background-color: white;
+}
+  
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 20px 25px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: skyblue;
 }
 </style>
--->
-<!--<div id="wrapper">-->
 
-<div class="container">
-<nav><a href="home.html">Home</a> &nbsp; <a href="gallery.html">Gallery</a>  &nbsp; <a href="booking.html">Bookings</a>  &nbsp; <a href="about.html">About Us</a>  &nbsp; <a href="login.html">Login</a></nav>  
+<body>
+    <ul>
+    <li>
+        <a href="login.html">Login</a></li>
+          <li><a href="about.html">About Us</a></li>
+
+          <li><a href="booking.html">Bookings</a></li>
+<li><a  href="gallery.html">Gallery</a></li>
+      <li><a  href="home.html">Home</a></li>
+
+</ul>
+
+    <div class="w3-content w3-section" style="max-width:500px">
+  <img class="mySlides" src="premier.jpg" style="width:125%">
+  <img class="mySlides" src="deluxe.jpg" style="width:125%">
+  <img class="mySlides" src="hotel.jpg" style="width:125%">
+        <img class="mySlides" src="family.jpg" style="width:125%">
+  <img class="mySlides" src="beach.jpg" style="width:125%">
+  <img class="mySlides" src="hotelback.jpg" style="width:125%">
 </div>
 
-<div class="gallery1">
-  <a target="_blank" href="deluxe.jpg">
-    <img src="deluxe.jpg"  width="800" height="600">
-  </a>
-  <div class="desc">Deluxe Room </div>
-</div>
+<script>
+var myIndex = 0;
+carousel();
 
-<div class="gallery2">
-  <a target="_blank" href="premier.jpg">
-    <img src="premier.jpg"  width="800" height="600">
-  </a>
-  <div class="desc">Premier Room</div>
-</div>
-
-<div class="gallery3">
-  <a target="_blank" href="family.jpg">
-    <img src="family.jpg"  width="800" height="600">
-  </a>
-  <div class="desc">Family Room</div>
-</div>
-
-
-</body>
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+    </body>
 </html>

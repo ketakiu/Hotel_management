@@ -22,14 +22,14 @@ try
 	Class.forName("com.mysql.jdbc.Driver");
 	   String url = "jdbc:mysql://cs5200-fall2019-udipi1.c0gfzy5hp1s0.us-east-2.rds.amazonaws.com/hotel_management";
 	   conn = DriverManager.getConnection(url,"admin","Ketaki7495#");
-String sql="Update users set firstName='"+first_name+"',lastName='"+last_name+"',email='"+email+"',userName = '"+username+"', pass_word ='"+password+"', phone='"+phone_number+"', dob='"+dob+"' where userName='"+uName+"';";
+String sql="Update staff set firstName='"+first_name+"',lastName='"+last_name+"',email='"+email+"',userName = '"+username+"', pass_word ='"+password+"', phone='"+phone_number+"', dob='"+dob+"' where userName='"+uName+"';";
 ps = conn.prepareStatement(sql);
 
 
 int i = ps.executeUpdate();
 if(i > 0)
 {
-out.print("Record Updated Successfully. Login with new ID password for further operations");
+out.print("Record Updated Successfully");
 }
 else
 {

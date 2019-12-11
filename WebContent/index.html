@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,7 +29,7 @@
         <div class="col-md-6 main">
 
             <form action="signUp.jsp" method="post">
-                <div class="container"> 
+
                 <h1> Signup form </h1>
 
                 <input class="box" type="text" name="firstname" id="firstname"
@@ -48,12 +49,13 @@
                 <input class="box" type="text" name="phone" id="phone"
                        placeholder="Phone Number " required/><br>
 
+
                 <input class="box" type="date" name="dob" id="dob"
                        placeholder="Date of Birth" required /><br>
                 <br>
-                <input type="submit" id="submitDetails"
-                       name="submitDetails" value="Submit" /><br>
-			</div>
+                <button onclick="window.location.href='signup_success.html'" id="submitDetails"
+                      name="submitDetails">Submit</button> <br>
+
             </form>
 
         </div>

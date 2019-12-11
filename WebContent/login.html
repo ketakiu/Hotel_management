@@ -5,10 +5,45 @@
   <link href="login.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic&display=swap" rel="stylesheet">
+<style>
+          
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
 
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 20px 25px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+    </style>
 <form action="sample.jsp" method="post">
-  <div class="imgcontainer">
-    <nav><a href="http://localhost:8080/HotelManagement/WebContent/home.html">Home</a> &nbsp; <a href="gallery.html">Gallery</a>  &nbsp; <a href="booking.html">Bookings</a>  &nbsp; <a href="about.html">About Us</a>  &nbsp; <a href="login.html">Login</a></nav>  
+ <div class="imgcontainer">
+       <ul>
+    <li>
+         <li><a  href="reviews.jsp">Reviews</a></li>
+    
+          <li><a href="about.html">About Us</a></li>
+<li><a href="booking.html">Bookings</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+
+      <li><a  href="home.html">Home</a></li>
+        
+</ul>  
     <br>
     <img src="user.png" alt="Avatar" class="avatar">
   </div>

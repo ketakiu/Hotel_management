@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title> Book a Room </title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="custom.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+	
+     <div class="hotel_reserve_box">
+        
+         <h3> Hotel Reservation Form </h3><br>
+         <form action="bookRoom.jsp" method="post">
+		
+             <div class="form-group">
+		
+		<label>First name</label>
+		<input class="box" type="text" name="firstname" id="firstname"
+                       placeholder="First Name" required /><br> <br> <br>
+
+		<label>Last name</label>
+                <input class="box" type="text" name="lastname" id="lastname"
+                       placeholder="Last Name" required /><br> <br> <br>
+
+		<label>Email</label>
+                <input class="box" type="email" name="email" id="email"
+                       placeholder="E-Mail " required /><br>  <br> <br>
+                              
+	
+		<label>Contact Number</label>
+                <input class="box" type="text" name="phone" id="phone"
+                       placeholder="Phone Number " required/><br> <br> <br>
+
+	        <label>Check-In Date</label>
+	        <input class="box" type="date" name="check-in-date" id="check-in_date"
+                       placeholder="Check-In Date " required/><br> <br> <br>
+
+	        <label>Check-Out Date</label>
+	        <input class="box" type="date" name="check-out-date" id="check-out_date"
+                       placeholder="Check-Out Date " required/><br> <br> <br>
+	     
+                 <label>Room/Suite Type</label>
+                 <select class="form-control" id="roomType" name="roomType">
+                     <option value="not selected" selected>Select Room/Suite </option>
+                     <option value="Standard"> Standard </option>
+                     <option value="Deluxe"> Deluxe </option>
+                     <option value="Superior Deluxe"> Superior Deluxe </option>
+                     
+                 </select>
+             </div>
+             <div class="form-group">
+                 <label>Number of rooms/suite</label>
+                 <select class="form-control" name = "noOfRooms" id="room_number">
+                     <option value="0"> 0 </option>
+                     <option value="1"> 1 </option>
+                     <option value="2"> 2 </option>
+                     <option value="3"> 3 </option>
+                     <option value="4"> 4 </option>
+                     <option value="5"> 5 </option>
+                     <option value="6"> 6 </option>
+                     <option value="7"> 7 </option>
+                 </select>
+             </div>
+             <div class="form-group">
+                 <label>Number of Guests</label>
+                 <select class="form-control" name = "noOfGuests" id="person_number">
+                     <option value="0"> 0 </option>
+                     <option value="1"> 1 </option>
+                     <option value="2"> 2 </option>
+                     <option value="3"> 3 </option>
+                     <option value="4"> 4 </option>
+                     <option value="5"> 5 </option>
+                     <option value="6"> 6 </option>
+                     <option value="7"> 7 </option>
+                 </select>
+             </div>
+             <div class="form-group">
+                 <label>Restaurant facilities?</label>
+                 <select class="form-control" name = "facilities" id="res_facilities">
+                     <option value="0" selected> Do you want restaurant facilities? </option>
+                     <option value="Yes"> Yes </option>
+                     <option value="No"> No </option>
+                 </select>
+             </div><br>
+             <div class= "form-group">
+		    <button type="submit" id="submitDetails" name="submitDetails" style="background-color: #7527b0;color: #fff;padding: 6px 70px;font-weight: 600;font-size: 18px; margin-left: 50px;align:center;border-radius: 5px;"> Book </button>
+         </div>
+         
+    
+         </form>
+     </div>
+     
+</body>
+</html>

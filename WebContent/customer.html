@@ -1,115 +1,50 @@
 <!DOCTYPE html>
 <html>
-<head>
+<title>Customer Profile</title>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-.container {
-  position: relative;
-  width: 100%;
-  max-width: 400px;
+img {
+  border-radius: 50%;
 }
 
-.container img {
-  width: 100%;
-  height: auto;
+body,h1 {font-family: "Raleway", Arial, sans-serif
+ background-color: #cccccc;
+    background-image: url('hotel.jpg');
 }
-    
-    .button {
-  background-color: #4CAF50; /* Green */
-  border: none;
-  color: white;
-  padding: 16px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
-  cursor: pointer;
-}
-
-.button1 {
-    top: 10%;
-  left: 50%;
-  background-color: white; 
-  color: black; 
-  border: 2px solid #4CAF50;
-}
-
-.button1:hover {
-  background-color: #4CAF50;
-  color: black;
-}
-
-.button2 {
-    top: 10%;
-  left: 100%;
-  background-color: white; 
-  color: black; 
-  border: 2px solid #008CBA;
-}
-
-.button2:hover {
-  background-color: #008CBA;
-  color: black;
-}
-
-.button3 {
-    top: 10%;
-  left: 150%;
-  background-color: white; 
-  color: black; 
-  border: 2px solid #f44336;
-}
-
-.button3:hover {
-  background-color: #f44336;
-  color: black;
-}
-.button4 {
-    top: 10%;
-  left: 200%;
-  background-color: white; 
-  color: black; 
-  border: 2px solid #f44336;
-}
-
-.button4:hover {
-  background-color: #f44336;
-  color: black;
-}
-.container .btn {
-  position: absolute;
-  
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  background-color: wheat;
-  color: white;
-  font-size: 16px;
-  padding: 12px 24px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  text-align: center;
-}
-
-.container .btn:hover {
-  background-color: white;
-}
+h1 {letter-spacing: 6px}
+.w3-row-padding img {margin-bottom: 12px}
 </style>
-</head>
 <body>
 
-<div class="container">
-  <img src="hotelback.jpg" alt="Snow" style="width:350%">
-    
-    <button class="btn button1" onclick="window.location.href='myBookings.html'" > My Bookings</button>
-<button class="btn button2" onclick="window.location.href='UpdateCustomer1.jsp'">Update Profile</button>
-<button class="btn button3" onclick="window.location.href='login.html'">Book room</button>
-    <button class="btn button4" onclick="window.location.href='home.html'">Log Out</button>
+<!-- !PAGE CONTENT! -->
+<div class="w3-content" style="max-width:1500px">
 
+<!-- Header -->
+<header class="w3-panel w3-center w3-opacity" style="padding:128px 16px">
+    
+  <h1 class="w3-xlarge">Customer Profile</h1>
+ 
+  <img src="img_avatar.png" alt="Avatar" style="width:200px">
+  <div class="w3-padding-32">
+    <div class="w3-bar w3-border">
+      <a href="UpdateCustomer1.jsp" class="w3-bar-item w3-button">Update</a>
+         <a href="customerMyBookings.jsp" class="w3-bar-item w3-button">My Bookings</a>
+        <a href="bookroom1.html" class="w3-bar-item w3-button">Book a Room</a>
+
+        <a href="home.html" class="w3-bar-item w3-button">Log Out</a>
+    </div>
+  </div>
+</header>
+
+  
+<!-- End Page Content -->
 </div>
+
 
 </body>
 </html>
