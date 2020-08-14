@@ -1,70 +1,208 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-    <title> Signup Form</title>
-
-
-    <link rel="stylesheet"
-          href=
-                  "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-          integrity=
-                  "sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-          crossorigin="anonymous">
-
-    <link rel="stylesheet" type="text/css" href="style.css">
-
+<title>Hotel Management System</title>
+  <meta charset="utf-8">
+  <link href="text.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
+    <style>
+ 
+        
+.button1 {
+    top: 10%;
+  left: 10%;
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.button2 {
+    top: 10%;
+  left: 30%;
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA;
+}
+
+.button2:hover {
+  background-color: #008CBA;
+  color: white;
+}
+.mySlides {display:none;}
+.button3 {
+    top: 10%;
+  left: 50%;
+  background-color: white; 
+  color: black; 
+  border: 2px solid #f44336;
+}
+
+.button3:hover {
+  background-color: #f44336;
+  color: white;
+}
+.button4 {
+    top:10%;
+  left: 70%;
+  background-color: white; 
+  color: black; 
+  border: 2px solid #f44336;
+}
+
+.button4:hover {
+  background-color: #f44336;
+  color: white;
+}
+.button5 {
+    top: 10%;
+  left: 90%;
+  background-color: white; 
+  color: black; 
+  border: 2px solid #f44336;
+}
+
+.button5:hover {
+  background-color: #f44336;
+  color: white;
+}
+    .container .btn {
+  position: absolute;
+  
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: wheat;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.container .btn:hover {
+  background-color: white;
+}
+  
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 20px 25px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: skyblue;
+}
+</style>
+
 <body>
+    <ul>
+    <li><a  href="reviews.jsp">REVIEWS</a></li>
+        <li><a href="login.html">LOG IN</a></li>
+        <li><a href="about.html">ABOUT US</a></li>
+          <li><a href="booking.html">BOOKINGS</a></li>
 
-<br>
-<br>
-<br>
-<div class="container" >
-    <div class="row">
-        <div class="col-md-3">
+          <li><a href="gallery.html">GALLERY</a></li>
 
-        </div>
+      <li><a  href="index.html">HOME</a></li>
 
-        <div class="col-md-6 main">
-
-            <form action="signUp.jsp" method="post">
-
-                <h1> Signup form </h1>
-
-                <input class="box" type="text" name="firstname" id="firstname"
-                       placeholder="First Name" required /><br>
-
-                <input class="box" type="text" name="lastname" id="lastname"
-                       placeholder="Last Name" required /><br>
-
-                <input class="box" type="email" name="email" id="email"
-                       placeholder="E-Mail " required /><br>
-                <input class="box" type="text" name="username" id="username"
-                       placeholder="Username" required /><br>
-
-                <input class="box" type="password" name="password"
-                       id="password" placeholder="Password " required/><br>
-
-                <input class="box" type="text" name="phone" id="phone"
-                       placeholder="Phone Number " required/><br>
-
-
-                <input class="box" type="date" name="dob" id="dob"
-                       placeholder="Date of Birth" required /><br>
-                <br>
-                <button onclick="window.location.href='signup_success.html'" id="submitDetails"
-                      name="submitDetails">Submit</button> <br>
-
-            </form>
-
-        </div>
-
-
-        <div class="col-md-3">
-        </div>
-
+</ul>
+<div class="container">
+      <img src="hotel.jpg" alt="Snow" style="width:100%;">
+      <div class="centered">Welcome</div>
     </div>
+<main>
+      <h2>Welcome to our Hotel</h2>
+    <div class="box">
+        <p>No two neighborhoods are alike.
+            
+          <br>  
+            <br>
+            Neither are any two Hotel  properties. When you stay with us, youâ€™re not just staying anywhere,
+            youâ€™re staying somewhereâ€”within a vibrant community,<br> in a unique boutique hotel that combines authentic local experiences,
+            <br>modern design and intimate service with the peace of mind and consistency of staying with one of the worldâ€™s largest hotel groups.
+ <br>  
+            <br>
+Each hotel is as individual as its surroundings and is also a reflection of them.
+            <br>
+            <br>
+            You can taste the local flavor on our menus and see it in the art and photography displayed on our walls.
+             <br>  
+            <br>Youâ€™ll catch guests and neighbors hanging out in our bars, get great advice from our team members on what to see
+            and do in the neighborhood, and be refreshed by just how relaxed and inviting it all feels.
+ <br>  
+            <br>
+Ready to discover a little more?</p>
+      </div>
+</main>
+    
+    
+    
+<h2 class="w3-center">Sneek Peek</h2>
+
+<div class="w3-content w3-display-container">
+
+  <img class="mySlides" src="family.jpg" style="width:100%">
+  <img class="mySlides" src="deluxe.jpg" style="width:100%">
+  <img class="mySlides" src="beach.jpg" style="width:100%">
+      <img class="mySlides" src="hotel.jpg" style="width:100%">
+  <img class="mySlides" src="hotelback.jpg" style="width:100%">
+    <img class="mySlides" src="premier.jpg" style="width:100%">
+  <img class="mySlides" src="beach.jpg" style="width:100%">
+    
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
 </div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+   
+
+
 </body>
 </html>
